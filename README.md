@@ -1,2 +1,1 @@
-# testdb
-nothing just a db test
+Please Go back and exit this page. Thank you
