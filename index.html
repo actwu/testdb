@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cz.css">
+    <script src="cz.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+  iframe{
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-x:hidden;
+  }
+</style>
+
+<body>
+  <form name="ts" class="white-bg">
+  
+    <section class="white center fullscreen" id="page1">
+      <span class="land">
+        <input name="name" placeholder="Name" required
+      class="no-round white2-bg black-txt" value="Me">
+
+      <a onclick="page2()" class="btn link">
+        <p class="caps bold white">
+          Start
+        </p>
+      </a>
+      </span>
+      
+    </section>
+  <section id="page2" class="hide">
+
+ 
+    <div class="head white right space2">
+     
+      <a onclick="start_media()" class="btn">
+        <i class="fa-solid fa-rotate black"></i>
+      </a>
+
+    </div>
+    
+     <div id="screen"></div>
+     
+      <div class="bottom float fullwidth center small-p white">
+      <span class="land">
+      
+      <input name="chat" placeholder="chat" required
+      class="no-round black-txt white2-bg">
+  
+      <button type="submit" class="btn prim">
+        <i class="fa-solid fa-reply white"></i>
+      </button>
+    </span>
+    </div>
+    <button onclick="start_media()" class="btn link">
+      <i class="fa-solid fa-rotate white"></i>
+    </button>
+      
+
+    
+  </section>
+
+</form>
+  
+</body>
+<script>
+  add = add_css_fontawesome()
+</script>
+
+<script>
+  const form = document.forms['ts']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(db, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+
+      start_media()
+  })
+</script>
+
+<script src="sets/config.js"></script>
+<script src="sets/engine.js"></script>
+</html>
