@@ -1,52 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+  <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Actwu Official Site">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-  <meta name="theme-color" content="#191919">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta property="og:title" content="Actwu">
-  <meta property="og:description" content="Actwu Official Site">
-  <meta property="og:image" content="https://actwu.github.io/img/banner.png">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Actwu">
-  <meta name="twitter:description" content="Actwu Official Site">
-  <meta name="twitter:image" content="https://actwu.github.io/img/banner.png">
-  <meta name="twitter:image:alt" content="Actwu">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Actwu Official Site">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+    <meta name="theme-color" content="#191919">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="og:title" content="Actwu">
+    <meta property="og:description" content="Actwu Official Site">
+    <meta property="og:image" content="https://actwu.github.io/img/banner.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Actwu">
+    <meta name="twitter:description" content="Actwu Official Site">
+    <meta name="twitter:image" content="https://actwu.github.io/img/banner.png">
+    <meta name="twitter:image:alt" content="Actwu">
+  
+    <meta property="title" content="Actwu">
+    <meta property="author" content="Actwu">
+    <meta property="image" content="https://actwu.github.io/img/banner.png">
+    <meta property="description" content="Actwu Official Site">
+    <title>Actwu</title>
+    <script src="https://cordzip.github.io/cz.js">
+   </script>
+   
+   <link rel="stylesheet" href="https://cordzip.github.io/cz.css">
+   <link rel="shortcut icon" href="https://actwu.github.io/img/icon.png" type="image/x-icon">
+  
+  </head>
 
-  <meta property="title" content="Actwu">
-  <meta property="author" content="Actwu">
-  <meta property="image" content="https://actwu.github.io/img/banner.png">
-  <meta property="description" content="Actwu Official Site">
-  <title>Actwu</title>
-  <script src="https://cordzip.github.io/cz.js">
- </script>
- 
- <link rel="stylesheet" href="https://cordzip.github.io/cz.css">
- <link rel="shortcut icon" href="https://actwu.github.io/img/icon.png" type="image/x-icon">
-
-</head>
-
-<style>
-  iframe{
-    top: 0;
-    left:0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    overflow-x:hidden;
-  }
-</style>
 
 <body>
   <form name="ts" class="white-bg">
@@ -75,7 +63,7 @@
 
     </div>
     
-     <div id="screen"></div>
+     <div id="screen" class="white fullscreen bg"></div>
      
       <div class="bottom float fullwidth center small-p white">
       <span class="land">
@@ -103,19 +91,8 @@
   add = add_css_fontawesome()
 </script>
 
-<script>
-  const form = document.forms['ts']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(db, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-
-      start_media()
-  })
-</script>
-
-<script src="sets/config.js"></script>
 <script src="sets/engine.js"></script>
+<script src="sets/config.js"></script>
+
 </html>
+

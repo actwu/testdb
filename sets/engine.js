@@ -1,27 +1,26 @@
 
-    function start_media() {
-       read_reference = t + d + key;
-      runtime =  `<${temp} src="${read_reference}" ${setout}></${temp}>`
+  const form = document.forms['ts']
 
-     screens.innerHTML = runtime;
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(dbpost, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+      alert("Sended")
+      start_media()
+      setTimeout(() => {
+        start_media()
+        }, 5000);
+  })
 
-   }
-   
-    setTimeout(() => {
-   start_media()
-  }, 1000);
+  function start_media() {
+    
+   runtime =  `<${temp} src="${read_reference}" ${setout}></${temp}>`
 
-  const deploy = [key = [`${file}${ics}`]]
+  screens.innerHTML = runtime;
 
-  console.table(deploy)
+}
 
-  database = [
-
-    site = "https://script.google.com/",
-    dbtype = "macros",
-    subject="/s/",
-
-    icsdb ="AKfycbwnWcnY14eUCzQcA9B-UGW9GSkQX917EOPKRvSC8NgqD6qa8PHUHosRLGIl9pWzB_nB",
-    db = [`${site}${dbtype}${subject}${icsdb}/exec`]
-
-  ]
+ setTimeout(() => {
+start_media()
+}, 1000);

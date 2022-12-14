@@ -1,18 +1,21 @@
 
-id = true;
-id < !true ? 'continue' : 'run'
-var imports = [
+  template = [
+    screens = document.querySelector('#screen'),
+    setout=`class="big-my fullscreen bg"`,    
+    temp = "iframe"
+  ]
+  database = [
+
+    type = "https://",
+    site = "google.com/",
+    dbtype = "macros",
+    subject="/s/",
+
+    icsdb ="AKfycbwnWcnY14eUCzQcA9B-UGW9GSkQX917EOPKRvSC8NgqD6qa8PHUHosRLGIl9pWzB_nB",
+    icsoutput="AKfycbwOzLOFk6tAD3-Ax4ZLTbxzedT2rTBo1WlDzNwpU3sUDECdQ2QuK6XwpRdSKMxS4iEA",
+    dbpost = [`${type}script.${site}${dbtype}${subject}${icsdb}/exec`],
+
+    read_reference = dbget = [`${type}script.${site}${dbtype}${subject}${icsoutput}/exec`],
+    ,
+  ]
   
-screens = document.querySelector('#screen'),
-temp = "iframe",
-t = type = 'https://',
-subname = 'docs',
-d= dal = subname + ".google.com",
-file="/spreadsheets/d/e/2PACX",
-ics = '-1vRz6snAsP2GsTd3W5wqYmwku6c6j8FsAiu6KuGoJ61UA7WxD1fInxg2suZ0txWYQs_mthNPBwErgErR/pubhtml?widget=true&amp;headers=false',
-id = key = `?`,
-
-setout='class="bg"'
-
-]
-
